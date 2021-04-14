@@ -25,8 +25,8 @@
           }"
           @click="change(i)"
         >
-		<image :src="v.icon" mode=""></image>
-        <view>{{ v.text }}</view>
+		<image :src="v.icon" mode="aspectFit"></image>
+        <view style="line-height: 1.5;">{{ v.text }}</view>
         </view>
         <view
           v-if="!pills"
@@ -294,7 +294,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  height: 200rpx;
+  height: 150rpx;
   display: flex;
   align-items: center;
   background-color: #ffffff;

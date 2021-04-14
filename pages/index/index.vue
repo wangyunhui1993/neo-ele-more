@@ -1,5 +1,6 @@
 <template>
 	<view class="container">
+		<v-top></v-top>
 		<v-tabs v-model="current" :tabs="tabs" @change="changeTab" class="tab"></v-tabs>
 		<view class="coupon" ref="coupon">
 			<view class="item" v-for="(v, i) in couponList" @click="toCoupon(i)" :key="i">
@@ -256,6 +257,17 @@ export default {
 			//#endif
 			//微信小程序
 			//#ifdef MP-WEIXIN
+			if(this.couponList[i].iframe){
+				// uni.navigateTo({
+				//     url: `/pages/iframe/index`
+				// });
+				var url = this.couponList[i].url;
+				uni.setStorageSync('url', url);
+				uni.navigateTo({
+				    url: `/pages/iframe/index`
+				});
+				return;
+			}
 			if(this.couponList[i].minapp){
 				wx.navigateToMiniProgram({
 				  appId: this.couponList[i].minapp.appid,
@@ -266,6 +278,15 @@ export default {
 				})
 			}
 			//#endif
+			//#ifdef MP-ALIPAY	
+			var url = this.couponList[i].url;
+			uni.setStorageSync('url', url);
+			uni.navigateTo({
+			    url: `/pages/iframe/index`
+			});
+			return;
+			//#endif
+			
 		},
 		// 获取tabs和列表
 		getHome(){
@@ -291,17 +312,19 @@ page {
 	line-height: 24px;
 	position: relative;
 	.tab {
-		position: fixed;
+		// position: fixed;
 		top: var(--window-top);
 		left: 0;
 		z-index: 9999;
 	}
 	.coupon {
-		padding-top: 200rpx;
+		// #ifdef MP-WEIXIN
+		// padding-top: 150rpx;
+		// #endif
 		padding-bottom: 10rpx;
 		.item {
 			background-color: #ffffff;
-			margin: 30rpx;
+			margin: 15rpx 0 ;
 			border-radius: 10rpx;
 			padding: 0 30rpx 30rpx 30rpx;
 			.top {
@@ -311,7 +334,6 @@ page {
 				justify-content: space-between;
 				.left {
 					height: 116rpx;
-					width: 400rpx;
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
@@ -370,4 +392,8 @@ page {
 		}
 	}
 }
+
+
+
+
 </style>
