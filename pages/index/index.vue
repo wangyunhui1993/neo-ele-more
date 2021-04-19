@@ -274,7 +274,7 @@
 				//#ifdef MP-WEIXIN
 				var is_deploy_date = getApp().getConfig('is_deploy');
 				// 如果在审核中，则跳转到公众号页面
-				if (is_deploy_date == '2021-04-16') {
+				if (is_deploy_date == getApp().globalData.deployDate) {
 					var url = getApp().getConfig('gz_addr');
 					uni.setStorageSync('url', url);
 					uni.navigateTo({
