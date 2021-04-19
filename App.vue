@@ -10,6 +10,7 @@ export default {
 	},
 	onShow: function() {
 		console.log('App Show');
+		this.getConfigList();
 	},
 	onHide: function() {
 		console.log('App Hide');
@@ -19,12 +20,29 @@ export default {
 		subscribe: util.subscribe,
 		openid: '',
 		userInfo: '',
+		configList:[]
 	},
 	methods: {
 		shareConfig(){
 			var messages = util.messages;
 			return messages[Math.floor(Math.random()*messages.length)];
-		}
+		},
+		// 获取config
+		getConfigList(){
+			uni.request({
+			    url: this.globalData.api.config,
+			    success: (res) => {
+					this.globalData.configList = res.data.data;
+			    }
+			});
+		},
+		getConfig(type){
+			for(var item of this.globalData.configList){
+				if(item.type === type){
+					return item.value;
+				}
+			}
+		},
 	}
 };
 </script>

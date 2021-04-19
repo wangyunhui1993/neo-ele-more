@@ -2,7 +2,7 @@
 // 环境ID（接口前缀）
 const envId = 'https://307f9b8e-fc82-474f-86e9-d3daf4af7e90.bspapp.com'
 // 分享显示的主图
-var shareImg = '/static/coupon/share.png'
+var shareImg = '/static/images/share.png'
 // 分享跳转的路由
 var shareUrl = "/pages/index/index"
 const messages = [{
@@ -42,6 +42,7 @@ export default {
 	api: {
 		home: `${envId}/http/api/home`,
 		openid: `${envId}/http/api/openid`,
+		config: `${envId}/http/api/config`,
 	},
 	subscribe: `${envId}/http/subscribe`,
 	messages

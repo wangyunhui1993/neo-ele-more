@@ -3,22 +3,51 @@
 		  <view class="neo-top">
 		      <image class="item-photo" src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/3f8e7ba5-b12a-4a7e-a2bf-7edd3c235cfb.png" mode="aspectFit"></image>
 		    <view class="item-font">关注公众号享更多优惠</view>
-		    <view class="item-fl"  bindtap="getFL">领取福利</view>
+		    <view class="item-fl"  @click="getFL">领取福利</view>
 		  </view>
 		  <view class="neo-btns">
-		    <view class="neo-btn" type="default"  bindtap="addBtn">添加小程序</view>
-		    <view class="neo-btn" type="default" open-type="share">分享给好友</view>
+		    <!-- <view class="neo-btn" type="default"  @click="addBtn">添加小程序</view> -->
+			<button class="neo-btn" @click="addBtn">
+				添加小程序
+			</button>
+		    <!-- <view class="neo-btn" type="default" open-type="share">分享给好友</view> -->
+			<button class="neo-btn" open-type="share">
+				分享好友
+			</button>
 		  </view>
+		    <view v-if="showAddTip" class="neo-add-mini">
+		      <text>点击“添加到我的小程序”，领红包不迷路</text>
+		    </view>
 	</view>
 </template>
 
 <script>
+	var setTip = null;
 	export default {
 		name:"v-top",
 		data() {
 			return {
-				
+				showAddTip:false,
 			};
+		},
+		methods:{
+			addBtn(){
+				clearTimeout(setTip);
+				    this.showAddTip = true;
+				    setTip = setTimeout(()=>{
+				      this.showAddTip = false;
+				    },2000)
+			},
+			onShareAppMessage(res) {
+				return getApp().shareConfig()
+			},
+			getFL(){
+				var url = getApp().getConfig('gz_addr');
+				uni.setStorageSync('url', url);
+				uni.navigateTo({
+				    url: `/pages/iframe/index`
+				});
+			},
 		}
 	}
 </script>
@@ -48,7 +77,7 @@
   width: 180rpx;
   background: orange;
   text-align: center;
-  line-height: 1.8;
+  line-height: 2;
   border-radius: 30rpx;
   color: #fff;
 }
@@ -56,26 +85,16 @@
 .neo-btns{
   display: flex;
   padding: 10rpx;
+  justify-content:space-around
 }
 .neo-btns .neo-btn{
-  
-  position: relative;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 14px;
-      padding-right: 14px;
-      box-sizing: border-box;
-      font-size: 18px;
-      text-align: center;
-      text-decoration: none;
-      line-height: 2;
-      border-radius: 5px;
-      -webkit-tap-highlight-color: transparent;
-      overflow: hidden;
-      cursor: pointer;
+	  font-size: 28rpx;
+	  width: 40%;
+	  line-height: 70rpx;
+	  height: 70rpx;
       color: #06ae56;
           background-color: #f2f2f2;
+		  
 }
 
 
@@ -178,6 +197,6 @@
     border-style: solid;
     border-bottom-color: #ea4a36;
     top: -28rpx;
-    right:20%;
+    right:25%;
 }
 </style>
