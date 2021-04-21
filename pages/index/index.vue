@@ -272,7 +272,8 @@
 				//#endif
 				//微信小程序
 				//#ifdef MP-WEIXIN
-				var is_deploy_date = getApp().getConfig('is_deploy');
+				var deployType = getApp().globalData.deployType;
+				var is_deploy_date = getApp().getConfig(deployType);
 				// 如果在审核中，则跳转到公众号页面
 				if (is_deploy_date == getApp().globalData.deployDate) {
 					var url = getApp().getConfig('gz_addr');

@@ -36,6 +36,7 @@ export default {
 		userInfo: '',
 		configList:[],
 		deployDate:util.deployDate,
+		deployType:util.deployType,
 	},
 	methods: {
 		shareConfig(){

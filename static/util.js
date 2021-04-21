@@ -5,6 +5,7 @@ const envId = 'https://307f9b8e-fc82-474f-86e9-d3daf4af7e90.bspapp.com'
 var shareImg = '/static/images/share.png'
 // 分享跳转的路由
 var shareUrl = "/pages/index/index"
+var deployType = 'waimaidijiachi'
 var deployDate = '2021-04-19'
 const messages = [{
 				title: '吃了这么多年外卖，你知道这个秘密吗？',
@@ -47,5 +48,6 @@ export default {
 	},
 	subscribe: `${envId}/http/subscribe`,
 	messages,
-	deployDate
+	deployDate,
+	deployType
 }
