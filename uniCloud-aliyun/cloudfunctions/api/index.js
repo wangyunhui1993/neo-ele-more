@@ -11,11 +11,8 @@ exports.main = async (event, context) => {
 	switch (event.path) {
 		//首页
 		case '/home':
-			var homeModelTabs = await homeModel.tabs()
-			resp.tabs = homeModelTabs.data
-			var homeModelCoupons = await homeModel.coupons()
-			resp.coupons = homeModelCoupons.data
-			return response.success(resp)
+			var homeModelCoupons = await homeModel()
+			return response.success(homeModelCoupons.data);
 			break;
 		case '/openid':
 			var openid = await getOpenId(event.queryStringParameters.jsCode)
@@ -30,5 +27,5 @@ exports.main = async (event, context) => {
 
 	}
 	//返回数据给客户端
-	return response.success()
+	return response.success(resp);
 };

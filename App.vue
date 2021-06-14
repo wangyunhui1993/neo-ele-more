@@ -1,68 +1,41 @@
 <script>
-import util from "static/util.js"
-const updateManager = uni.getUpdateManager();
-export default {
-	onLaunch: function() {
-		console.log('App Launch');
-		updateManager.onUpdateReady(function (res) {
-		  uni.showModal({
-		    title: '更新提示',
-		    content: '新版本已经准备好，是否重启应用？',
-		    success(res) {
-		      if (res.confirm) {
-		        // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-		        updateManager.applyUpdate();
-		      }
-		    }
-		  });
+	export default {
+		// 此处globalData为了演示其作用，不是uView框架的一部分
+		globalData: {
+			username: '白居易',
+			// 环境ID（接口前缀）
+			envId : 'https://55019472-0e23-4ff2-b645-6964bc1e74ce.bspapp.com',
+			configList:[]
+		},
 		
-		});
-		const userInfo = uni.getStorageSync('userInfo');
-		if(userInfo){
-			this.globalData.userInfo = userInfo
+		onLaunch() {
+			// 1.1.0版本之前关于http拦截器代码，已平滑移动到/common/http.interceptor.js中
+			// 注意，需要在/main.js中实例化Vue之后引入如下(详见文档说明)：
+			// import httpInterceptor from '@/common/http.interceptor.js'
+			// Vue.use(httpInterceptor, app)
+			// process.env.VUE_APP_PLATFORM 为通过js判断平台名称的方法，结果分别如下：
+			/**
+			 * h5，app-plus(nvue下也为app-plus)，mp-weixin，mp-alipay......
+			 */
+			console.log("onLaunch");
+			this.getConfigList();
+		},
+		methods:{
+			getConfigList(){
+				var url = `${this.globalData.envId}/http/api/home`
+				console.log(url)
+				uni.request({
+				    url: url,
+				    success: (res) => {
+						this.globalData.configList = res.data.data;
+				    }
+				});
+			},
 		}
-	},
-	onShow: function() {
-		console.log('App Show');
-		this.getConfigList();
-	},
-	onHide: function() {
-		console.log('App Hide');
-	},
-	globalData: {
-		api: util.api,
-		subscribe: util.subscribe,
-		openid: '',
-		userInfo: '',
-		configList:[],
-		deployDate:util.deployDate,
-		deployType:util.deployType,
-	},
-	methods: {
-		shareConfig(){
-			var messages = util.messages;
-			return messages[Math.floor(Math.random()*messages.length)];
-		},
-		// 获取config
-		getConfigList(){
-			uni.request({
-			    url: this.globalData.api.config,
-			    success: (res) => {
-					this.globalData.configList = res.data.data;
-			    }
-			});
-		},
-		getConfig(type){
-			for(var item of this.globalData.configList){
-				if(item.type === type){
-					return item.value;
-				}
-			}
-		},
 	}
-};
 </script>
 
-<style>
-
+<style lang="scss">
+	@import "uview-ui/index.scss";
+	@import "common/demo.scss";
 </style>

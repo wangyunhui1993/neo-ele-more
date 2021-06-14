@@ -1,182 +1,56 @@
 {
-	"coupon": {
-		"data": [{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/166c2f1f-ff28-4d50-87db-8e4236f24c38.jpeg",   //主图
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/15586bca-5eab-4c2c-81f6-b73ef33c690c.png",   //图标
-				"isDelete": 0,
-				"minapp": {   //小程序
-					"appid": "wxece3a9a4c82f58c9",
-					"path": "pages/sharePid/web/index?scene=https://s.click.ele.me/johGEru"
-				},
-				"name": "饿了么红包",
-				"sort": 1,   //排序
-				"tabId": 1,   
-				"type": 1,
-				"url": "https://s.click.ele.me/johGEru"   //h5链接
-			},
-			{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/a972a440-39b1-4348-913e-be482fdde5a5.jpg",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/163e6625-6a59-4c14-9f90-087cd6d73d03.png",
-				"isDelete": 0,
-				"minapp": {   //小程序
-					"appid": "wxde8ac0a21135c07d",
-					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D748933e2b2db5e1325348232b09e1c6a%26url%3Dhttps%253A%252F%252Fcube.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253D748933e2b2db5e1325348232b09e1c6a%253Aneomini%26sid%3Dneomini&lch=cps:waimai:5:748933e2b2db5e1325348232b09e1c6a:neomini&f_token=1&f_userId=1"
-				},
+    "coupon": {
+        "data": [
+            {
+                "minapp": {
+                    "appid": "wxece3a9a4c82f58c9",
+                    "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/johGEru"
+                },
+                "name": "饿了么红包",
+                "type": "elmwm",
+				"isDelete":0,
+                "url": "https://s.click.ele.me/johGEru"
+            },
+            {
+                "minapp": {
+                    "appid": "wxece3a9a4c82f58c9",
+                    "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/Bnwrbqu"
+                },
+                "name": "饿了么商超红包",
+                "type": "elmsc",
+				"isDelete":0,
+                "url": "https://s.click.ele.me/t?union_lens=lensId%3AOPT%401618407950%4021070500_078d_178d0a187e9_03ec%4001%3BeventPageId%3A20150318020004284&&e=-s021Sp9ngRSZxFWf2o7mou2xHNl4wuu5LRwddtjoV6d83W8fkjGLhxzhdbONsAR80BzEwi9kifrSpS7hQun3Zvojr7zT3LvgCt0BiRCgBVvfp30Wwz1vJcUjaWTW0Et3P4Z3ud1iMf9jJZCGmunO4kbh18DCR0HVrvq1oVEgwS1WcXD7FXQuuinTYPmMB79GGEOiOovNi8Bf6hn6HRKWF2m2WmPHjkDbNmg63VWBwct0ZnFg1MnKDK3LNXnjWWYqG9XC4g5uLBrQjqJ6G2q7w0NkmnGZqGbA61NbIfydgUb1znOOvGRA8za7JtOFezsWHaExrv2AO6EYaBTZvEaeqa0MsqPaOqDPQPCyAoJbjVaFZpbyoLv7oqim0be5aAhA1XQ7j8BACksvppwCafidfWt2FFWS5AlVHEsp270QSRcUv9PyTQh59xdTj0XWDL2B3qXuuwq&"
+            },
+			
+            {
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?lch=cps:waimai:5:748933e2b2db5e1325348232b09e1c6a:neomini:2:98404&weburl=https%3A%2F%2Fdpurl.cn%2FjrYkHGsz&f_userId=1&f_token=1"
+                },
 				"name": "美团外卖红包",
-				"sort": 2,
-				"tabId": 2,
-				"type": 1,
-				"url": "http://dpurl.cn/bbtwYGlz"
-			},
-			{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/1a606c33-ed69-46d0-8f76-1c3b2071bc93.png",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/15586bca-5eab-4c2c-81f6-b73ef33c690c.png",
-				"isDelete": 0,
-				"minapp": {
-					"appid": "wxece3a9a4c82f58c9",
-					"path": "taoke/pages/shopping-guide/index?scene=rXP0Xqu"
-				},
-				"name": "饿了么专属红包",
-				"sort": 3,
-				"tabId": 1,
-				"type": 1,
-				"url": "https://s.click.ele.me/johGEru"
-			},
-			{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/07dc296e-ac13-4799-9994-8b48bc9175b2.jpg",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/163e6625-6a59-4c14-9f90-087cd6d73d03.png",
-				"isDelete": 0,
-				"minapp": {   //小程序
-					"appid": "wxde8ac0a21135c07d",
-					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D748933e2b2db5e1325348232b09e1c6a%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253D748933e2b2db5e1325348232b09e1c6a%253Aneomini%26sid%3Dneomini&lch=cps:waimai:5:748933e2b2db5e1325348232b09e1c6a:neomini&f_token=1&f_userId=1"
-				},
-				"name": "美团商超红包",
-				"sort": 5,
-				"tabId": 2,
-				"type": 1,
-				"url": "https://dpurl.cn/kJDsFGgz"
-			},
-			
-			{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/33ce9a03-1686-4099-a408-180427bb6fcb.jpg",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/15586bca-5eab-4c2c-81f6-b73ef33c690c.png",
-				"isDelete": 0,
-				"minapp": {
-					"appid": "wxece3a9a4c82f58c9",
-					"path": "pages/sharePid/web/index?scene=https://s.click.ele.me/Bnwrbqu"
-				},
-				"name": "饿了么商超红包",
-				"sort": 4,
-				"tabId": 1,
-				"type": 1,
-				"url": "https://s.click.ele.me/t?union_lens=lensId%3AOPT%401618407950%4021070500_078d_178d0a187e9_03ec%4001%3BeventPageId%3A20150318020004284&&e=-s021Sp9ngRSZxFWf2o7mou2xHNl4wuu5LRwddtjoV6d83W8fkjGLhxzhdbONsAR80BzEwi9kifrSpS7hQun3Zvojr7zT3LvgCt0BiRCgBVvfp30Wwz1vJcUjaWTW0Et3P4Z3ud1iMf9jJZCGmunO4kbh18DCR0HVrvq1oVEgwS1WcXD7FXQuuinTYPmMB79GGEOiOovNi8Bf6hn6HRKWF2m2WmPHjkDbNmg63VWBwct0ZnFg1MnKDK3LNXnjWWYqG9XC4g5uLBrQjqJ6G2q7w0NkmnGZqGbA61NbIfydgUb1znOOvGRA8za7JtOFezsWHaExrv2AO6EYaBTZvEaeqa0MsqPaOqDPQPCyAoJbjVaFZpbyoLv7oqim0be5aAhA1XQ7j8BACksvppwCafidfWt2FFWS5AlVHEsp270QSRcUv9PyTQh59xdTj0XWDL2B3qXuuwq&"
-			},
-			{
-				"bannerPic": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/a8c7bc08-8d77-4a09-ada5-641e45a0da66.png",
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/95bb5193-8c31-4365-b8d7-33b16711e0d9.png",
-				"isDelete": 0,
-				"minapp": {
-					"appid": "wx91d27dbf599dff74",
-					"path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhcFwsUAFYTWxwyEgZUGFwVBxEOUBtcEgUiQwpDBUoyS0IQWhkeHAxfEE8HCl4NXAAECUteDEEFWA8LRUpTEwQLR0dKWQoVHUVBRn8AF1sUAxEAVR5YHAcSAFIca1BKFlBVfV1PYHFTL1MDfUdGQjBJGGUOHjdQG1oUABYDVR1aJQETB1UcWBMHGgFlK1sWMlNpVxpSEwIiBVQaWRALFwBRG2sVBRIAURtaFQESAl0TaxICGzdVElgRBhcOUhpee14iN1UaWhYFEgJWEl4VBRUAZRhrJTISN1YrGXsBRlddHFsTBUcEAh5eFlUQDlNPDkJVF1NWEggdC0JTVCtZFAMWDg%253D%253D"
-				},
-				"name": "三只松鼠大礼包",
-				"sort": 6,
-				"tabId": 3,
-				"type": 0,
-				"url": "https://union-click.jd.com/jdc?e=&p=AyIGZRhcFwsUAFYTWxwyEgZUGFwVBxEOUBtcEgUiQwpDBUoyS0IQWhkeHAxfEE8HCl4NXAAECUteDEEFWA8LRUpTEwQLR0dKWQoVHUVBRn8AF1sUAxEAVR5YHAcSAFIca1BKFlBVfV1PYHFTL1MDfUdGQjBJGGUOHjdQG1oUABYDVR1aJQETB1UcWBMHGgFlK1sWMlNpVxpSEwIiBVQaWRALFwBRG2sVBRIAURtaFQESAl0TaxICGzdVElgRBhcOUhpee14iN1UaWhYFEgJWEl4VBRUAZRhrJTISN1YrGXsBRlddHFsTBUcEAh5eFlUQDlNPDkJVF1NWEggdC0JTVCtZFAMWDg=="
-			}
-			
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".create": false,
-				".delete": false,
-				".read": true,
-				".update": false
-			}
-		}
-	},
-	"messages": {
-		"data": [{
-				"touser": "o8Pqo5Ac9_ntJ7cOdhYVcF5QaAVg",
-				"page": "pages/index/index",
-				"data": "外卖领券提醒, 快来领优惠券啦！",
-				"templateId": "hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI",
-				"subscribeDate": "2020-12-26",
-				"sendDate": "2020-12-27",
-				"send": true
-			},
-			{
-				"touser": "o8Pqo5B3v9GtB3lCx0EujzSUs-v4",
-				"page": "pages/index/index",
-				"data": "外卖领券提醒, 快来领优惠券啦！",
-				"templateId": "hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI",
-				"subscribeDate": "2020-12-28",
-				"sendDate": "2020-12-27",
-				"send": true
-			}
-		]
-	},
-	"tab": {
-		"data": [{
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/c30926c6-8747-454a-bf3f-88f72bf2f2e0.png",
-				"text": "全部",
-				"tabId": 0,
+                "type": "mtwm",
 				"isDelete":0,
-				"sort":0
-			},
-			{
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/15586bca-5eab-4c2c-81f6-b73ef33c690c.png",
-				"text": "饿了么",
-				"tabId": 1,
+                "url": "https://dpurl.cn/cyYVHGRz"
+            },
+            {
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?lch=cps:waimai:5:748933e2b2db5e1325348232b09e1c6a:neomini:4:98404&weburl=https%3A%2F%2Fdpurl.cn%2FFbYSHGjz&f_userId=1&f_token=1"
+                },
+                "name": "美团商超红包",
+                "type": "mtsc",
 				"isDelete":0,
-				"sort":1
-			},
-			{
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/163e6625-6a59-4c14-9f90-087cd6d73d03.png",
-				"text": "美团",
-				"tabId": 2,
-				"isDelete":0,
-				"sort":2
-			},
-			{
-				"icon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-307f9b8e-fc82-474f-86e9-d3daf4af7e90/95bb5193-8c31-4365-b8d7-33b16711e0d9.png",
-				"text": "京东",
-				"tabId": 3,
-				"isDelete":0,
-				"sort":3
-			}
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".read": true,
-				".create": false,
-				".update": false,
-				".delete": false
-			}
-		}
-	},
-	"config": {
-			"data": [{
-					"value": "https://mp.weixin.qq.com/s/eD3u4845YpblMFw1CMe3pA",
-					    "type": "gz_addr"
-				},
-				{
-						"value": false,
-						    "type": "is_deploy"
-					}
-			],
-			"schema": {
-				"bsonType": "object",
-				"permission": {
-					".read": true,
-					".create": false,
-					".update": false,
-					".delete": false
-				}
-			}
-		}
-	
+                "url": "https://dpurl.cn/3bYSHGhz"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "permission": {
+                ".create": false,
+                ".delete": false,
+                ".read": true,
+                ".update": false
+            }
+        }
+    }
 }
